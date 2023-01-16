@@ -8,10 +8,6 @@ import { PORT } from "./config";
 import sockets from "./sockets";
 import { connectDB } from "./db";
 
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
-
 connectDB();
 
 const server = http.createServer(app);
